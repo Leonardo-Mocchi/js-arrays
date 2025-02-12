@@ -19,6 +19,9 @@ console.log(fourthTeacher);
 
 teachers[4] = "Patrick"
 
+//METODO ALTERNATIVO
+/* teachers.splice(4, 1, "Patrick") */
+
 console.log(teachers);
 
 // 3. Rimuovi l'ultimo insegnante dall'array e salvalo nella variabile lastTeacher qui sotto
@@ -54,7 +57,7 @@ console.log(teachers);
 // 7. Trova l'indice dell'insegnante 'Lewis' nell'array teachers
 // e salvalo nella variabile lewisIndex
 
-const lewisIndex = teachers[5];
+const lewisIndex = teachers.indexOf("Lewis");
 
 console.log(lewisIndex);
 
@@ -63,14 +66,14 @@ console.log(lewisIndex);
 
 let isTeachersEmpty;
 
-for (let i = 0; i < teachers.length; i++) {
-  if (teachers.length > 0) {
-    isTeachersEmpty = false;
-  } else if (teachers.length = 0) {
-    isTeachersEmpty = true;
-  } else {
-    isTeachersEmpty = undefined;
-  }
+/* for (let i = 0; i < teachers.length; i++) { */
+if (teachers.length > 0) {
+  isTeachersEmpty = false;
+} else if (teachers.length = 0) {
+  isTeachersEmpty = true;
+} else {
+  isTeachersEmpty = undefined;
 }
+/* } */   // il ciclo sembra ridondante
 
 console.log(isTeachersEmpty);
